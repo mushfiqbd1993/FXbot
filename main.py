@@ -6,11 +6,12 @@ bot = telebot.TeleBot(MAIN_BOT_TOKEN)
 
 @bot.message_handler(commands=['start'])
 def welcome_message(message):
-    markup = InlineKeyboardMarkup(row_width=3)
+    markup = InlineKeyboardMarkup(row_width=2)
     markup.add(
         InlineKeyboardButton("🚀 Get Started", url="https://www.marketvox.com"),
-        InlineKeyboardButton("🌟 Watch Videos", url="https://t.me/+OiMzr4wH6jVlMDc1"),  # Change to actual VIP group
-        InlineKeyboardButton("❓ Help", url="https://t.me/fxtradifysupport_bot")
+        InlineKeyboardButton("🌟 Watch Videos", url="https://t.me/+OiMzr4wH6jVlMDc1"),
+        InlineKeyboardButton("❓ Help", url="https://t.me/fxtradifysupport_bot"),
+        InlineKeyboardButton("📘 Guide", url="https://t.me/+OiMzr4wH6jVlMDc1")
     )
     
     bot.send_message(message.chat.id,
@@ -23,7 +24,7 @@ Truth is, a lot of “gurus” copy our trades.
 📩 Message @@fxtradify_bot and press Start to begin.
 
 💰 How It Works:
-We partner with trusted brokers — they pay us, so you get everything FREE. You just need to fund your account . Withdraw at any time.
+We partner with trusted brokers — they pay us, so you get everything FREE. You just need to fund your account. Withdraw at any time.
 
 ✅ Choose your funding tier — all include VIP access:
 
